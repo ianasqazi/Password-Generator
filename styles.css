@@ -1,0 +1,22 @@
+.jumbotron{
+    align-content: center;
+    margin:auto;
+}
+.fixed-bottom{
+    align-content: center;
+    text-align: center;
+    margin:auto;
+}
+
+#generated-password{
+    margin:10px 10px 10px 10px ;
+    vertical-align: middle;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    border-style: dotted;
+    width: 100%;
+}
+
