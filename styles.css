@@ -1,14 +1,11 @@
-.jumbotron{
-    align-content: center;
-    margin:auto;
-}
+
 .fixed-bottom{
     align-content: center;
     text-align: center;
     margin:auto;
 }
 
-#generated-password{
+#generatedPassword{
     margin:10px 10px 10px 10px ;
     vertical-align: middle;
     font-weight: 400;
