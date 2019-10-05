@@ -14,7 +14,7 @@ function fullExecute(){
 
     //Function to check if num of characters for Password matches our requirement
     function validateNumChar(){
-      if ((lenPwd>=8) && (lenPwd<=128)  && (lenPwd==Number)){
+      if ((lenPwd>=8) && (lenPwd<=128)){
         validateCharSets();
       }
       else{
