@@ -3,34 +3,34 @@
 
 function fullExecute(){
 
-var lenPwd = parseInt(prompt("How many characters do you want in the password ?","8-128 characters"));
+    var lenPwd = parseInt(prompt("How many characters do you want in the password ?","8-128 characters"));
 
-var confirmSplChars = confirm("Do you want to include Special characters ? ");
-var confirmNumChars = confirm("Do you want to include Numeric characters ? ");
-var confirmSmlChars = confirm("Do you want to include Lower Case characters ? ");
-var confirmUprChars = confirm("Do you want to include Upper Case characters ? ");
+    var confirmSplChars = confirm("Do you want to include Special characters ? ");
+    var confirmNumChars = confirm("Do you want to include Numeric characters ? ");
+    var confirmSmlChars = confirm("Do you want to include Lower Case characters ? ");
+    var confirmUprChars = confirm("Do you want to include Upper Case characters ? ");
 
-validateNumChar();
+    validateNumChar();
 
-//Function to check if num of characters for Password matches our requirement
-function validateNumChar(){
-  if ((lenPwd>=8) && (lenPwd<=128)  && (lenPwd==Number)){
-    validateCharSets();
-  }
-  else{
-    alert ("Range Incorrect : 8-120 characters !!! \n \t OR \t\n NOT a number");
-  }
-}
+    //Function to check if num of characters for Password matches our requirement
+    function validateNumChar(){
+      if ((lenPwd>=8) && (lenPwd<=128)  && (lenPwd==Number)){
+        validateCharSets();
+      }
+      else{
+        alert ("Range Incorrect : 8-120 characters !!! \n \t OR \t\n NOT a number");
+      }
+    }
 
-// Function to check if one of the charactersets have been selected for input
+    // Function to check if one of the charactersets have been selected for input
 
-function validateCharSets(){
-  if((confirmSplChars || confirmNumChars || confirmSmlChars || confirmUprChars) == true){
-   genPwd();
-  }
-  else{
-    alert ("Please select one character set minimum !!!");
-  }
+    function validateCharSets(){
+      if((confirmSplChars || confirmNumChars || confirmSmlChars || confirmUprChars) == true){
+      genPwd();
+      }
+      else{
+        alert ("Please select one character set minimum !!!");
+      }
 }
 
 //Function to generate Random Password 
