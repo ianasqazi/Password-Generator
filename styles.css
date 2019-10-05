@@ -26,7 +26,6 @@ h1{
     width: 100%;
     height: 100px;
     text-align: center;
-    /* font-family: 'Courier New', Courier, monospace; */
     font-family: 'Press Start 2P', Courier, monospace;
     color: #666666;
 }
@@ -45,7 +44,6 @@ h1{
     border-color: red;
     font-family: 'Turret Road';
 }
-
 
 .buttons{
     display:flex;
