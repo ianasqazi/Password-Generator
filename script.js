@@ -1,26 +1,24 @@
 
 // Generate Random Password based on User Input using JavaScript
 
-window.alert("Please choose minimum 1 option of character set from the following prompt windows");
-var lenPwd = prompt("How many characters do you want in the password ? (8 - 120 range");
+function fullExecute(){
+
+var lenPwd = parseInt(prompt("How many characters do you want in the password ?","8-128 characters"));
 
 var confirmSplChars = confirm("Do you want to include Special characters ? ");
 var confirmNumChars = confirm("Do you want to include Numeric characters ? ");
 var confirmSmlChars = confirm("Do you want to include Lower Case characters ? ");
 var confirmUprChars = confirm("Do you want to include Upper Case characters ? ");
 
-// var confirmNumChars=true;
-// var confirmSmlChars=true;
-// var confirmUprChars=true;
-// var confirmSplChars=true;
+validateNumChar();
 
 //Function to check if num of characters for Password matches our requirement
 function validateNumChar(){
-  if ((lenPwd>=8) && (lenPwd<=120)){
+  if ((lenPwd>=8) && (lenPwd<=128)){
     validateCharSets();
   }
   else{
-    alert ("Choose between the range of 8-120 characters !!!")
+    alert ("Choose between the range of 8-120 characters !!!");
   }
 }
 
@@ -31,7 +29,7 @@ function validateCharSets(){
    genPwd();
   }
   else{
-    alert ("Please select one character set minimum !!!")
+    alert ("Please select one character set minimum !!!");
   }
 }
 
@@ -50,8 +48,22 @@ function genPwd (){
   (confirmSmlChars==true) ? pwd +=lwrChars : '';
   (confirmUprChars==true) ? pwd +=uprChars : '';
 
- for (var i = 0; i < lenPwd; i++){
-   finalPwd += pwd.charAt(Math.floor(Math.random() * lenPwd));
- };
+  // Randomize the characters from selected Charsets  
+  for (var i = 1; i <= lenPwd; i++){
+    finalPwd += pwd.charAt(Math.floor(Math.random() * pwd.length ));
+    document.getElementById("generatedPassword").innerText=finalPwd;
+  };
   return finalPwd;
 }
+}
+
+// End of Full Execute () 
+// -------------------------------------
+
+// Function to copy Password to Clip Board 
+
+function CopyPwd(){
+       document.getElementById("generatedPassword").select();
+       document.execCommand('Copy');
+       window.alert("Password copied to Clipboard !!! ")
+   }
