@@ -14,11 +14,11 @@ validateNumChar();
 
 //Function to check if num of characters for Password matches our requirement
 function validateNumChar(){
-  if ((lenPwd>=8) && (lenPwd<=128)){
+  if ((lenPwd>=8) && (lenPwd<=128)  && (lenPwd==Number)){
     validateCharSets();
   }
   else{
-    alert ("Choose between the range of 8-120 characters !!!");
+    alert ("Range Incorrect : 8-120 characters !!! \n \t OR \t\n NOT a number");
   }
 }
 
@@ -36,6 +36,7 @@ function validateCharSets(){
 //Function to generate Random Password 
 
 function genPwd (){
+  // Declaring Variables 
   var pwd = '';
   var finalPwd = '';
   var uprChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -43,6 +44,7 @@ function genPwd (){
   var numChars = "0123456789";
   var splChars = "~!@#$%^&*()_+-=`";
 
+  // Adding the selected charactersets to the the final PWD (temporary) variable 
   (confirmSplChars==true) ? pwd +=splChars : '';
   (confirmNumChars==true) ? pwd +=numChars : '';
   (confirmSmlChars==true) ? pwd +=lwrChars : '';
